@@ -58,8 +58,6 @@ class BAKESHAPE_OT_bake(bpy.types.Operator):
                 continue
             length, IS_REBAKE = self.bake(obj, s)
             self.report({'INFO'}, s.name+": "+str(length)+(", rebake" if IS_REBAKE else ""))
-        else:
-            return {'CANCELLED'}
         
         return {'FINISHED'}
         
